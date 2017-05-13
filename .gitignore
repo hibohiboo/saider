@@ -29,6 +29,7 @@ node_modules
 # User setting
 public/m.html
 public/i.html
+public/bundle.js
 *.rdb
 config.json
 

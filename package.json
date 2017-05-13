@@ -9,7 +9,7 @@
     "postinstall": "babel src -d lib",
     "dev": "npm run build && node .",
     "test": "npm run lint && npm run build",
-    "build": "babel src -d lib",
+    "build": "babel src -d lib && webpack --config config/webpack.config.js",
     "lint": "eslint src",
     "cleanroom": "node scripts/clean.js"
   },
@@ -40,6 +40,7 @@
     "express": "4.14.0",
     "helmet": "3.1.0",
     "redis": "2.6.2",
-    "socket.io": "1.5.1"
+    "socket.io": "1.5.1",
+    "webpack": "2.5.1"
   }
 }
