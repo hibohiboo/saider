@@ -30,6 +30,11 @@ node_modules
 public/m.html
 public/i.html
 public/bundle.js
+public/*.eot
+public/*.svg
+public/*.ttf
+public/*.woff
+public/*.woff2
 *.rdb
 config.json
 

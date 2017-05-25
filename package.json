@@ -9,7 +9,7 @@
     "dev": "npm run build && node .",
     "test": "npm run lint && npm run build",
     "lint": "eslint src",
-    "build": "npm run build && npm run webpack",
+    "build": "npm run babel && npm run webpack",
     "babel": "babel src -d lib",
     "webpack": "webpack --config config/webpack.config.js",
     "cleanroom": "node scripts/clean.js"
@@ -31,7 +31,12 @@
     "babel-cli": "6.18.0",
     "babel-plugin-add-module-exports": "0.2.1",
     "babel-preset-es2015-node6": "0.3.0",
+    "bootstrap": "3.3.7",
+    "bootstrap-sass": "3.3.7",
+    "css-loader": "0.28.2",
     "eslint": "3.8.1",
+    "file-loader": "0.11.1",
+    "jquery": "2.2.4",
     "webpack": "2.5.1"
   },
   "dependencies": {

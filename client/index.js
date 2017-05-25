@@ -1,3 +1,12 @@
+var $ = require("jquery");
+jQuery = $;
+require("bootstrap");
+
+var io = require("socket.io-client");
+
+require("../node_modules/bootstrap/dist/css/bootstrap.css");
+require("./style.css");
+
 var socketio = io.connect(window.location.host);
 var user_name = 'ななし';
 var memo_data = {};

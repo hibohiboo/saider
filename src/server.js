@@ -40,15 +40,17 @@ if (process.env.NODE_ENV !== 'production') {
   const compiler = webpack(webpackConfig);
   app.use(webpackDevMiddleware(compiler));
 }
-
-app.use(helmet({
-  contentSecurityPolicy: {
-    directives: {
-      defaultSrc: ["'self'", `${config.hostname}`, `ws://${config.hostname}`],
-      imgSrc: ["'self'", '*'],
+else {
+  app.use(helmet({
+    contentSecurityPolicy: {
+      directives: {
+        defaultSrc: ["'self'", `${config.hostname}`, `ws://${config.hostname}`],
+        imgSrc: ["'self'", '*'],
+      },
     },
-  },
-}));
+  }));
+}
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
