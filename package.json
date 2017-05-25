@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run build && NODE_ENV=production node .",
-    "dev": "npm run build && node .",
+    "dev": "npm run babel && node .",
     "test": "npm run lint && npm run build",
     "lint": "eslint src",
     "build": "npm run babel && npm run webpack",
@@ -37,7 +37,9 @@
     "eslint": "3.8.1",
     "file-loader": "0.11.1",
     "jquery": "2.2.4",
-    "webpack": "2.5.1"
+    "style-loader": "0.18.1",
+    "webpack": "2.5.1",
+    "webpack-dev-middleware": "1.10.2"
   },
   "dependencies": {
     "body-parser": "1.15.2",
