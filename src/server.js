@@ -34,11 +34,11 @@ const app = express();
 const server = require('http').Server(app);
 
 if (process.env.NODE_ENV !== 'production') {
-    const webpackDevMiddleware = require('webpack-dev-middleware');
-    const webpack = require('webpack');
-    const webpackConfig = require('../config/webpack.config');
-    const compiler = webpack(webpackConfig);
-    app.use(webpackDevMiddleware(compiler));
+  const webpackDevMiddleware = require('webpack-dev-middleware');
+  const webpack = require('webpack');
+  const webpackConfig = require('../config/webpack.config');
+  const compiler = webpack(webpackConfig);
+  app.use(webpackDevMiddleware(compiler));
 }
 
 app.use(helmet({
